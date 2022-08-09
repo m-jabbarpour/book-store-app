@@ -1,11 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const displayedBooksSlice = createSlice({
-<<<<<<< Updated upstream
-  name: "displaedBooks",
-=======
   name: "displayedBooks",
->>>>>>> Stashed changes
   initialState: {
     value: [],
   },
@@ -58,7 +54,6 @@ const displayedBooksSlice = createSlice({
           break;
       }
     },
-   
   },
 });
 
