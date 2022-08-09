@@ -10,8 +10,8 @@ function HeaderMd() {
   return (
     <header className="hidden md:block shadow-lg">
       <div className="container mx-auto px-12 py-4 rounded-lg flex justify-between">
-        <Link href="http://localhost:3000">
-          <div className="flex gap-x-4 items-center">
+        <div className="flex gap-x-4 items-center">
+          <Link href="http://localhost:3000">
             <Image
               layout="fixed"
               src={logo}
@@ -19,10 +19,10 @@ function HeaderMd() {
               height="48"
               className=" cursor-pointer"
             />
-            <span className=" cursor-pointer">دسته‌بندی</span>
-            <SearchBarLg />
-          </div>
-        </Link>
+          </Link>
+          <span className=" cursor-pointer">دسته‌بندی</span>
+          <SearchBarLg />
+        </div>
         <div className="flex gap-x-4 items-center">
           <span className=" cursor-pointer">مدیریت</span>
           <UserCircleIcon className="w-6 cursor-pointer" />
