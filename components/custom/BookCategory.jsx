@@ -4,6 +4,12 @@ import React, { useEffect, useState } from "react";
 import BookSwiper from "./BookSwiper";
 
 function BookCategory({ title, books }) {
+<<<<<<< Updated upstream
+=======
+
+  
+
+>>>>>>> Stashed changes
   return (
     <div className="container mx-auto px-12 pt-4 pb-6 sm:pt-8 sm:pb-12 bg-neutral-100">
       <div className="flex justify-between mb-6">
