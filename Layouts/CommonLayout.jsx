@@ -3,7 +3,7 @@ import HeaderSm from "../components/common/HeaderSm";
 import HeaderMd from "../components/common/HeaderMd";
 import Footer from "../components/common/Footer";
 
-function Layout({ children }) {
+function CommonLayout({ children }) {
   return (
     <>
       <HeaderSm />
@@ -14,4 +14,4 @@ function Layout({ children }) {
   );
 }
 
-export default Layout;
+export default CommonLayout;
