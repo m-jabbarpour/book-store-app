@@ -5,7 +5,8 @@ import BooksContainer from "../../components/custom/BooksContainer";
 import Filter from "../../components/custom/Filter";
 import SideBar from "../../components/custom/SideBar";
 import Sort from "../../components/custom/Sort";
-import Layout from "../../Layout";
+import CommonLayout from "../../Layouts/CommonLayout";
+
 import { useSelector, useDispatch } from "react-redux";
 import { fetchBooks } from "../../src/redux/slices/booksSlice";
 import {
@@ -58,7 +59,7 @@ function books() {
       <Head>
         <title>طاقچه | کتاب‌ها</title>
       </Head>
-      <Layout>
+      <CommonLayout>
         <div className="container mx-auto px-12 flex flex-col md:flex-row">
           <SideBar />
           <div className="grow">
@@ -66,7 +67,7 @@ function books() {
             <BooksContainer books={displayedBooks} />
           </div>
         </div>
-      </Layout>
+      </CommonLayout>
     </>
   );
 }

@@ -5,7 +5,7 @@ import CartTableMd from "../components/custom/CartTableMd";
 import CartTableSm from "../components/custom/CartTableSm";
 import OrderDetails from "../components/custom/OrderDetails";
 import Title from "../components/custom/Title";
-import Layout from "../Layout";
+import CommonLayout from "../Layouts/CommonLayout";
 
 function Cart() {
   const cart = useSelector((store) => store.cart);
@@ -14,7 +14,7 @@ function Cart() {
       <Head>
         <title>طاقچه | سبد خرید</title>
       </Head>
-      <Layout>
+      <CommonLayout>
         <div className="container mx-auto px-5 md:px-12 mt-10">
           <Title title="سبد خرید" />
           {cart.addedBooks.length === 0 ? (
@@ -27,7 +27,7 @@ function Cart() {
             </div>
           )}
         </div>
-      </Layout>
+      </CommonLayout>
     </>
   );
 }
