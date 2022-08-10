@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 
-import Layout from "../Layout";
 
+import CommonLayout from "../Layouts/CommonLayout";
 import SwiperLg from "../components/custom/SwiperLg";
 import BookCategory from "../components/custom/BookCategory";
 import BannerSwiper from "../components/custom/BannerSwiper";
@@ -65,14 +65,14 @@ export default function Home() {
         <link rel="icon" href="/logos/logo.svg" />
       </Head>
 
-      <Layout>
+      <CommonLayout>
         <SwiperLg />
         <BookCategory title="توسعه فردی" books={booksOfFirstCategory} />
         <BannerSwiper banners={blogBanners} />
         <BookCategory title="خانواده و ازدواج" books={booksOfSecondCategory} />
 
         <BannerSwiper banners={quoteBanners} />
-      </Layout>
+      </CommonLayout>
     </>
   );
 }

@@ -1,16 +1,16 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import BooksContainer from "../components/custom/BooksContainer";
-import Layout from "../Layout";
+import CommonLayout from "../Layouts/CommonLayout";
 
 function searchResults() {
   const foundBooks = useSelector((store) => store.search.foundBooks);
   return (
-    <Layout>
+    <CommonLayout>
       <div className="container mx-auto px-12">
         <BooksContainer books={foundBooks} />
       </div>
-    </Layout>
+    </CommonLayout>
   );
 }
 
