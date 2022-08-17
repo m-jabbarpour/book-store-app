@@ -7,7 +7,7 @@ function AuthLayout({ children }) {
     <>
       <HeaderSm />
       <HeaderMd />
-      {children}
+      <div className="container mx-auto px-5 md:px-12 mt-10">{children}</div>
     </>
   );
 }

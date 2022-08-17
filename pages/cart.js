@@ -5,6 +5,7 @@ import CartTableMd from "../components/custom/CartTableMd";
 import CartTableSm from "../components/custom/CartTableSm";
 import OrderDetails from "../components/custom/OrderDetails";
 import Title from "../components/custom/Title";
+import Wrapper from "../components/custom/Wrapper";
 import CommonLayout from "../Layouts/CommonLayout";
 
 function Cart() {
