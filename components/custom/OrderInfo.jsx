@@ -2,8 +2,10 @@ import React from "react";
 import Title from "./Title";
 import { Formik } from "formik";
 import * as yup from "yup";
+import { useRouter } from "next/router";
 
 function OrderInfo() {
+  const router = useRouter();
   const phoneRegex = /09(1[0-9]|0[0-9]|3[1-9]|2[1-9])-?[0-9]{3}-?[0-9]{4}/;
 
   const orderInfoSchema = yup.object().shape({
@@ -11,11 +13,18 @@ function OrderInfo() {
       .string()
       .required("شماره همراه خود را وارد کنید!")
       .matches(phoneRegex, "شماره وارد شده صحیح نیست!"),
-    address: yup.string().required("نشانی خود را وارد کنید!").min(10, "نشانی خود را کامل کنید!"),
+    address: yup
+      .string()
+      .required("نشانی خود را وارد کنید!")
+      .min(10, "نشانی خود را کامل کنید!"),
   });
 
   const handleOrderInfo = (values) => {
     console.log(values);
+  };
+
+  const goToPaymentResult = () => {
+    router.push("/payment-result");
   };
 
   return (
@@ -110,6 +119,7 @@ function OrderInfo() {
             <button
               type="submit"
               className="w-full text-center text-white font-bold bg-[#28C5CC] rounded-lg py-2 cursor-pointer hover:shadow col-span-2 sm:max-w-[320px] mx-auto"
+              onClick={goToPaymentResult}
             >
               پرداخت
             </button>

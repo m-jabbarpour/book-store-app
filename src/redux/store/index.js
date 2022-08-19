@@ -1,6 +1,7 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
+import booksSummarySlice from "../slices/booksSummarySlice";
 
 import booksSlice from "../slices/booksSlice";
 import cartSlice from "../slices/cartSlice";
@@ -10,6 +11,11 @@ import filteredPublicationsSlice from "../slices/filteredPublicationsSlice";
 import filteredSubCategory from "../slices/filteredSubCategory";
 import searchSlice from "../slices/searchSlice";
 import sortationSlice from "../slices/sortationSlice";
+import managementMunu from "../slices/managementMunu";
+import selectedBookSlice from "../slices/selectedBookSlice";
+import editBookModalSlice from "../slices/editBookModalSlice";
+import orderDetailsModalSlice from "../slices/orderDetailsModalSlice";
+import selectedOrderSlice from "../slices/selectedOrderSlice";
 
 const persistConfig = {
   key: "root",
@@ -26,6 +32,12 @@ const combinedReducers = combineReducers({
   filteredAuthors: filteredAuthorsSlice,
   search: searchSlice,
   cart: cartSlice,
+  booksSummary: booksSummarySlice,
+  managementMenu: managementMunu,
+  selectedBook: selectedBookSlice,
+  editBookModal: editBookModalSlice,
+  orderDetailsModal: orderDetailsModalSlice,
+  selectedOrder: selectedOrderSlice,
 });
 
 const persistedReducers = persistReducer(persistConfig, combinedReducers);

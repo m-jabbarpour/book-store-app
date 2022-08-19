@@ -5,7 +5,7 @@ import { useCookies } from "react-cookie";
 import { Formik } from "formik";
 import * as yup from "yup";
 
-function LoginForm() {
+function LoginManagement() {
   const router = useRouter();
   const [cookie, setCookie, removeCookie] = useCookies("token");
 
@@ -23,7 +23,7 @@ function LoginForm() {
       .post("http://localhost:3000/api/local-auth/login", user)
       .then((res) => {
         setCookie("token", res.data.token, { maxAge: 24 * 60 * 60 });
-        router.push("/cart");
+        router.push("/management");
       })
       .catch((error) => console.log(error.response.data));
   };
@@ -83,4 +83,4 @@ function LoginForm() {
   );
 }
 
-export default LoginForm;
+export default LoginManagement;

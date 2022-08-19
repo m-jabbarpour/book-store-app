@@ -24,8 +24,12 @@ function HeaderMd() {
           <SearchBarLg />
         </div>
         <div className="flex gap-x-4 items-center">
-          <span className=" cursor-pointer">مدیریت</span>
-          <UserCircleIcon className="w-6 cursor-pointer" />
+          <Link href="/management/login">
+            <span className=" cursor-pointer">مدیریت</span>
+          </Link>
+          <Link href="/login">
+            <UserCircleIcon className="w-6 cursor-pointer" />
+          </Link>
           <Link href="http://localhost:3000/cart">
             <ShoppingBagIcon className="w-6 cursor-pointer" />
           </Link>
