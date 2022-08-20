@@ -10,6 +10,7 @@ import RecommendedBooksByPublication from "../../components/custom/RecommendedBo
 import RecommendedBooksBySubCategory from "../../components/custom/RecommendedBooksBySubCategory";
 import Comments from "../../components/custom/Comments";
 import CommonLayout from "../../Layouts/CommonLayout";
+import RecommendedBooks from "../../components/custom/RecommendedBooks";
 
 const fetcher = (...args) => axios.get(...args).then((res) => res.data);
 
@@ -28,9 +29,10 @@ function SingleBook() {
       <BookDetails book={data} />
       <BookDescription book={data} />
       <Comments bookTitle={data.title} comments={data.comments} />
-      <RecommendedBooksByAuthor currentBook={data} />
-      <RecommendedBooksByPublication currentBook={data} />
-      <RecommendedBooksBySubCategory currentBook={data} />
+      <RecommendedBooks currentBook={data} property="authors" />
+      <RecommendedBooks currentBook={data} property="publications" />
+      <RecommendedBooks currentBook={data} property="subCategory" />
+    
     </CommonLayout>
   );
 }
