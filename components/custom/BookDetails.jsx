@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+
 import AddToCartButton from "./AddToCartButton";
 
 function BookDetails({ book }) {
@@ -20,7 +20,7 @@ function BookDetails({ book }) {
             <div className="text-xs sm:text-sm text-gray-500 flex flex-col gap-2">
               <div>
                 <span>نویسنده: </span>
-                <span>{book.authors.join(" ،")}</span>
+                <span>{book.authors.join("، ")}</span>
               </div>
               <div>
                 <span>مترجم: </span>

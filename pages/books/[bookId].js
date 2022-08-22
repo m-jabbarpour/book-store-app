@@ -1,15 +1,12 @@
 import axios from "axios";
 import { useRouter } from "next/router";
+import useSWR from "swr";
+
+import CommonLayout from "../../Layouts/CommonLayout";
 import BookDetails from "../../components/custom/BookDetails";
 import Navigation from "../../components/custom/Navigation";
-
-import useSWR from "swr";
 import BookDescription from "../../components/custom/BookDescription";
-import RecommendedBooksByAuthor from "../../components/custom/RecommendedBooksByAuthor";
-import RecommendedBooksByPublication from "../../components/custom/RecommendedBooksByPublication";
-import RecommendedBooksBySubCategory from "../../components/custom/RecommendedBooksBySubCategory";
 import Comments from "../../components/custom/Comments";
-import CommonLayout from "../../Layouts/CommonLayout";
 import RecommendedBooks from "../../components/custom/RecommendedBooks";
 
 const fetcher = (...args) => axios.get(...args).then((res) => res.data);
@@ -32,7 +29,6 @@ function SingleBook() {
       <RecommendedBooks currentBook={data} property="authors" />
       <RecommendedBooks currentBook={data} property="publications" />
       <RecommendedBooks currentBook={data} property="subCategory" />
-    
     </CommonLayout>
   );
 }

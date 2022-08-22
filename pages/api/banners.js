@@ -53,4 +53,29 @@ const banners = [
     category: "quote",
     src: "https://img.taaghche.com/banner/63791774310193335191.jpg?w=500",
   },
+  {
+    id: "d374c33c-ae52-42c2-9e0f-316d1a819232",
+    category: "instagram",
+    src: "https://img.taaghche.com/banner/63796446057608279979.jpg?w=500",
+  },
+  {
+    id: "d374d33c-ae52-42e2-9e0f-316d1a819232",
+    category: "instagram",
+    src: "https://img.taaghche.com/banner/63796446064639913853.jpg?w=500",
+  },
+  {
+    id: "d374c33c-ae52-42e2-9e0f-316d1a819232",
+    category: "instagram",
+    src: "https://img.taaghche.com/banner/63796446071088390169.jpg?w=500",
+  },
+  {
+    id: "e374c33c-ae52-42c2-9e0f-316d1a818232",
+    category: "instagram",
+    src: "https://img.taaghche.com/banner/63796446038622547889.jpg?w=500",
+  },
+  {
+    id: "d374d33c-ae63-42e2-9e0f-316d1a819232",
+    category: "instagram",
+    src: "https://img.taaghche.com/banner/63796446032013988122.jpg?w=500",
+  },
 ];

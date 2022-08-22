@@ -1,5 +1,8 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+
+import Filter from "./Filter";
+import Menu from "./Menu";
+
 import { useSelector, useDispatch } from "react-redux";
 import { fetchBooks } from "../../src/redux/slices/booksSlice";
 import {
@@ -11,13 +14,11 @@ import {
   removePublication,
 } from "../../src/redux/slices/filteredPublicationsSlice";
 
-import Filter from "./Filter";
-import Menu from "./Menu";
+
 
 function SideBar() {
   const dispatch = useDispatch();
   const books = useSelector((store) => store.books);
-  const sortation = useSelector((store) => store.sortation);
   const [authors, setAuthors] = useState([]);
   const [publications, setPublications] = useState([]);
 

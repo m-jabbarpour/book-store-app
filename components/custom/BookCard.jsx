@@ -1,9 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 function BookCard({ book }) {
- 
   return (
     <Link href={`http://localhost:3000/books/${book.id}`}>
       <div className="group w-[92px] sm:w-[120px] lg:w-[150px] cursor-pointer ">
@@ -21,7 +19,7 @@ function BookCard({ book }) {
           {book.title}
         </h5>
         <h6 className="text-xs lg:text-base text-center text-gray-500">
-          {book.authors}
+          {book.authors.join("، ")}
         </h6>
       </div>
     </Link>

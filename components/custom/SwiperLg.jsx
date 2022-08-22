@@ -20,7 +20,7 @@ export default function SwiperLg() {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        className="shadow-lg"
       >
         <SwiperSlide className="swiper-slide-lg rounded-lg overflow-hidden">
           <img src="https://newcdn.fidibo.com/img/Slides/nd-literature-lg.jpg" />

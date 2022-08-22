@@ -16,6 +16,7 @@ import selectedBookSlice from "../slices/selectedBookSlice";
 import editBookModalSlice from "../slices/editBookModalSlice";
 import orderDetailsModalSlice from "../slices/orderDetailsModalSlice";
 import selectedOrderSlice from "../slices/selectedOrderSlice";
+import bannersSlice from "../slices/bannersSlice";
 
 const persistConfig = {
   key: "root",
@@ -25,6 +26,7 @@ const persistConfig = {
 
 const combinedReducers = combineReducers({
   books: booksSlice,
+  banners: bannersSlice,
   displayedBooks: displayedBooksSlice,
   sortation: sortationSlice,
   filteredSubCategory: filteredSubCategory,

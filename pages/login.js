@@ -2,8 +2,10 @@ import Link from "next/link";
 import React from "react";
 import LoginForm from "../components/custom/LoginForm";
 import AuthLayout from "../Layouts/AuthLayout";
+import { v4 as uuidv4 } from "uuid";
 
 function login() {
+    console.log(uuidv4());
   return (
     <AuthLayout>
       <LoginForm />

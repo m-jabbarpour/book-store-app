@@ -1,60 +1,24 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import axios from "axios";
-
 
 import CommonLayout from "../Layouts/CommonLayout";
 import SwiperLg from "../components/custom/SwiperLg";
-import BookCategory from "../components/custom/BookCategory";
 import BannerSwiper from "../components/custom/BannerSwiper";
+import BookSubCategory from "../components/custom/BookSubCategory";
 
 import { fetchBooks } from "../src/redux/slices/booksSlice";
+import { fetchBanners } from "../src/redux/slices/bannersSlice";
 
 export default function Home() {
-  const [blogBanners, setBlogBanners] = useState([]);
-  const [quoteBanners, setQuoteBanners] = useState([]);
-  const [booksOfFirstCategory, setBooksOfFirstCategory] = useState([]);
-  const [booksOfSecondCategory, setBooksOfSecondCategory] = useState([]);
-
-  const books = useSelector((store) => store.books);
+  
+  const books = useSelector((store) => store.books.value);
+  const banners = useSelector((store) => store.banners.value);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchBooks());
-  }, []);
-
-  useEffect(() => {
-    const fetchBanners = async () => {
-      const res = await axios.get("/api/banners");
-      const banners = res.data;
-      setBlogBanners(banners.filter((banner) => banner.category === "blog"));
-      setQuoteBanners(banners.filter((banner) => banner.category === "quote"));
-    };
-    fetchBanners();
-  }, []);
-
-  useEffect(() => {
-    if (books.status === "success") {
-      let temp = books.value.filter(
-        (book) => book.subCategory === "توسعه فردی"
-      );
-      setBooksOfFirstCategory(temp);
-      temp = books.value.filter(
-        (book) => book.subCategory === "خانواده و ازدواج"
-      );
-      setBooksOfSecondCategory(temp);
-    }
-  }, [books.status]);
-
-  useEffect(() => {
-    const fetchBanners = async () => {
-      const res = await axios.get("/api/banners");
-      const banners = res.data;
-      setBlogBanners(banners.filter((banner) => banner.category === "blog"));
-      setQuoteBanners(banners.filter((banner) => banner.category === "quote"));
-    };
-    fetchBanners();
+    dispatch(fetchBanners());
   }, []);
 
   return (
@@ -67,11 +31,13 @@ export default function Home() {
 
       <CommonLayout>
         <SwiperLg />
-        <BookCategory title="توسعه فردی" books={booksOfFirstCategory} />
-        <BannerSwiper banners={blogBanners} />
-        <BookCategory title="خانواده و ازدواج" books={booksOfSecondCategory} />
-
-        <BannerSwiper banners={quoteBanners} />
+        <BookSubCategory subCategory="توسعه فردی" books={books} />
+        <BannerSwiper category="blog" banners={banners} />
+        <BookSubCategory subCategory="خانواده و ازدواج" books={books} />
+        <BannerSwiper category="quote" banners={banners} />
+        <BookSubCategory subCategory="داستان خارجی" books={books} />
+        <BannerSwiper category="instagram" banners={banners} />
+        <BookSubCategory subCategory="داستان ایرانی" books={books} />
       </CommonLayout>
     </>
   );
