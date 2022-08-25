@@ -11,7 +11,6 @@ import { fetchBooks } from "../src/redux/slices/booksSlice";
 import { fetchBanners } from "../src/redux/slices/bannersSlice";
 
 export default function Home() {
-  
   const books = useSelector((store) => store.books.value);
   const banners = useSelector((store) => store.banners.value);
   const dispatch = useDispatch();

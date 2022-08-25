@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useCookies } from "react-cookie";
@@ -73,7 +72,7 @@ function LoginForm() {
           </span>
           <button
             type="submit"
-            className="bg-[#28C5CC] font-bold text-white rounded p-2 cursor-pointer shadow"
+            className="bg-primary font-bold text-white rounded p-2 cursor-pointer shadow"
           >
             ورود
           </button>

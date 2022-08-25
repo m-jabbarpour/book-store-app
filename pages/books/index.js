@@ -12,7 +12,7 @@ import {
   setDisplayedBooks,
   sortDisplayedBooks,
 } from "../../src/redux/slices/displayedBooksSlice";
-
+import NoBookFound from "../../components/custom/NoBookFound";
 
 function books() {
   const dispatch = useDispatch();
@@ -63,7 +63,11 @@ function books() {
           <SideBar />
           <div className="grow">
             <Sort />
-            <BooksContainer books={displayedBooks} />
+            {displayedBooks.length > 0 ? (
+              <BooksContainer books={displayedBooks} />
+            ) : (
+              <NoBookFound />
+            )}
           </div>
         </div>
       </CommonLayout>

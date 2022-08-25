@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { editBook } from "../../src/redux/slices/booksSummarySlice";
 import { showEditBookModal } from "../../src/redux/slices/editBookModalSlice";
@@ -50,7 +50,7 @@ function EditBookModal() {
               <option value="توسعه فردی">توسعه فردی</option>
               <option value="خانواده و ازدواج">خانواده و ازدواج</option>
             </select>
-            <button className="bg-[#28C5CC] font-bold text-white rounded p-2 cursor-pointer hover:shadow">
+            <button className="bg-primary font-bold text-white rounded p-2 cursor-pointer hover:shadow">
               ثبت تغییرات
             </button>
           </form>

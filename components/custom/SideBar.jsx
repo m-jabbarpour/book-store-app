@@ -14,8 +14,6 @@ import {
   removePublication,
 } from "../../src/redux/slices/filteredPublicationsSlice";
 
-
-
 function SideBar() {
   const dispatch = useDispatch();
   const books = useSelector((store) => store.books);

@@ -67,10 +67,13 @@ const cartSlice = createSlice({
         case "Bronze":
           state.discountPercentage = 10;
           break;
-          default:
+        default:
           state.discountPercentage = 0;
           break;
       }
+    },
+    emptyCart: (state) => {
+      state.addedBooks = [];
     },
   },
 });
@@ -81,5 +84,6 @@ export const {
   updateCartValues,
   setDiscountCode,
   checkDiscountCode,
+  emptyCart
 } = cartSlice.actions;
 export default cartSlice.reducer;

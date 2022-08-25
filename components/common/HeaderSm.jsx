@@ -6,6 +6,7 @@ import { UserCircleIcon } from "@heroicons/react/solid";
 import { MenuIcon } from "@heroicons/react/solid";
 import SearchBarSm from "./SearchBarSm";
 import Link from "next/link";
+import CartIcon from "../custom/CartIcon";
 
 function HeaderSm() {
   return (
@@ -15,13 +16,13 @@ function HeaderSm() {
           <MenuIcon className="w-6" />
           <SearchBarSm />
         </div>
-        <Image layout="fixed" src={logo} width="48" height="48" />
+        <Link href="/">
+          <Image layout="fixed" src={logo} width="48" height="48" />
+        </Link>
         <div className="flex gap-x-4 items-center">
           <span>مدیریت</span>
           <UserCircleIcon className="w-6" />
-          <Link href="http://localhost:3000/cart">
-            <ShoppingBagIcon className="w-6" />
-          </Link>
+          <CartIcon />
         </div>
       </div>
     </header>

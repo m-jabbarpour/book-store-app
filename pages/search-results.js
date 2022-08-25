@@ -1,6 +1,6 @@
-import React from "react";
 import { useSelector } from "react-redux";
 import BooksContainer from "../components/custom/BooksContainer";
+import NoBookFound from "../components/custom/NoBookFound";
 import CommonLayout from "../Layouts/CommonLayout";
 
 function searchResults() {
@@ -8,7 +8,11 @@ function searchResults() {
   return (
     <CommonLayout>
       <div className="container mx-auto px-12">
-        <BooksContainer books={foundBooks} />
+        {foundBooks.length > 0 ? (
+          <BooksContainer books={foundBooks} />
+        ) : (
+          <NoBookFound />
+        )}
       </div>
     </CommonLayout>
   );

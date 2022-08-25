@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { PlusIcon, MinusIcon } from "@heroicons/react/solid";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -41,23 +41,20 @@ function AddToCartButton({ currentBook }) {
     <div className="w-full sm:w-[250px]">
       {number === 0 ? (
         <button
-          className="w-full text-center text-white font-bold bg-[#28C5CC] rounded-lg py-2 cursor-pointer"
+          className="w-full text-center text-white font-bold bg-primary rounded-lg py-2 cursor-pointer"
           onClick={handlePlus}
         >
           افزودن به سبد خرید
         </button>
       ) : (
         <div className="w-fit mx-auto flex items-center overflow-hidden rounded-lg">
-          <div className="p-2 cursor-pointer bg-[#28C5CC]" onClick={handlePlus}>
+          <div className="p-2 cursor-pointer bg-primary" onClick={handlePlus}>
             <PlusIcon className="w-6 text-white " />
           </div>
           <div className="w-[44px] text-center font-bold bg-neutral-200 h-full p-2">
             <span>{number}</span>
           </div>
-          <div
-            className="p-2 cursor-pointer bg-[#28C5CC]"
-            onClick={handleMinus}
-          >
+          <div className="p-2 cursor-pointer bg-primary" onClick={handleMinus}>
             <MinusIcon className="w-6 text-white" />
           </div>
         </div>

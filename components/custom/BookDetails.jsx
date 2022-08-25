@@ -41,7 +41,7 @@ function BookDetails({ book }) {
         </div>
         <div className="flex items-end justify-end grow py-4">
           <div className="w-full sm:w-[250px] flex flex-col items-center gap-4">
-            <div className="w-full text-center text-[#28C5CC] font-bold border-2 border-[#28C5CC] rounded-lg py-2">
+            <div className="w-full text-center text-primary font-bold border-2 border-primary rounded-lg py-2">
               <span> قیمت: {book.price.toLocaleString("fa-IR")} تومان</span>
             </div>
             <AddToCartButton currentBook={book} />

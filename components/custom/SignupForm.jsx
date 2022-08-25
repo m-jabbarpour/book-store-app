@@ -1,6 +1,4 @@
-import axios from "axios";
 import { Formik } from "formik";
-import React, { useState } from "react";
 import * as yup from "yup";
 
 function SignupForm() {
@@ -113,7 +111,7 @@ function SignupForm() {
           </span>
           <button
             type="submit"
-            className="bg-[#28C5CC] font-bold text-white rounded p-2 cursor-pointer shadow"
+            className="bg-primary font-bold text-white rounded p-2 cursor-pointer shadow"
           >
             ثبت نام
           </button>

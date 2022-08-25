@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setSearchedWord } from "../../src/redux/slices/searchSlice";
 import { fetchBooks } from "../../src/redux/slices/booksSlice";
 import { setFoundBooks } from "../../src/redux/slices/searchSlice";
+import { useRouter } from "next/router";
 
 function SearchBarSm() {
   const [isSearchActive, setIsSearchActive] = useState(false);
@@ -12,7 +13,12 @@ function SearchBarSm() {
   const searchedWord = useSelector((store) => store.search.searchedWord);
   const books = useSelector((store) => store.books.value);
   const dispatch = useDispatch();
+  const router = useRouter();
   const minimumCharacters = 3;
+
+  useEffect(() => {
+    if (router.pathname !== "/search-results") dispatch(setSearchedWord(""));
+  }, []);
 
   useEffect(() => {
     if (searchedWord.length === minimumCharacters) {

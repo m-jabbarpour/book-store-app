@@ -1,4 +1,3 @@
-import React from "react";
 import { useDispatch } from "react-redux";
 import { orders } from "../../src/database/orders";
 import { showOrderDetailsModal } from "../../src/redux/slices/orderDetailsModalSlice";
@@ -32,7 +31,7 @@ function OrdersManagement() {
             </span>
             <span className="w-1/4">{order.orderDate}</span>
             <span
-              className="w-1/4 cursor-pointer hover:text-[#28C5CC]"
+              className="w-1/4 cursor-pointer hover:text-primary"
               onClick={() => showOrder(order)}
             >
               بررسی سفارش

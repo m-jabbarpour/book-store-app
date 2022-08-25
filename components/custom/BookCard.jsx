@@ -15,7 +15,7 @@ function BookCard({ book }) {
           />
         </div>
 
-        <h5 className="text-xs lg:text-base text-center truncate group-hover:text-[#28C5CC] group-hover:font-bold transition-all duration-300">
+        <h5 className="text-xs lg:text-base text-center truncate group-hover:text-primary group-hover:font-bold transition-all duration-300">
           {book.title}
         </h5>
         <h6 className="text-xs lg:text-base text-center text-gray-500">

@@ -1,9 +1,7 @@
-import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setManagementOption } from "../../src/redux/slices/managementMunu";
 
 function ManagementMenu() {
-
   const managementMenu = useSelector((store) => store.managementMenu);
   const dispatch = useDispatch();
 
@@ -21,7 +19,7 @@ function ManagementMenu() {
         />
         <label
           htmlFor="books"
-          className="cursor-pointer px-2 py-1 rounded hover:text-[#28C5CC] hover:font-bold peer-checked:bg-[#28C5CC] peer-checked:text-white peer-checked:font-bold peer-checked:transition-all peer-checked:duration-300 peer-checked:shadow"
+          className="cursor-pointer px-2 py-1 rounded hover:text-primary hover:font-bold peer-checked:bg-primary peer-checked:text-white peer-checked:font-bold peer-checked:transition-all peer-checked:duration-300 peer-checked:shadow"
         >
           کتاب‌ها
         </label>
@@ -38,7 +36,7 @@ function ManagementMenu() {
         />
         <label
           htmlFor="quantities"
-          className="cursor-pointer px-2 py-1 rounded hover:text-[#28C5CC] hover:font-bold peer-checked:bg-[#28C5CC] peer-checked:text-white peer-checked:font-bold peer-checked:transition-all peer-checked:duration-300"
+          className="cursor-pointer px-2 py-1 rounded hover:text-primary hover:font-bold peer-checked:bg-primary peer-checked:text-white peer-checked:font-bold peer-checked:transition-all peer-checked:duration-300"
         >
           موجودی و قیمت‌ها
         </label>
@@ -55,7 +53,7 @@ function ManagementMenu() {
         />
         <label
           htmlFor="orders"
-          className="cursor-pointer px-2 py-1 rounded hover:text-[#28C5CC] hover:font-bold peer-checked:bg-[#28C5CC] peer-checked:text-white peer-checked:font-bold peer-checked:transition-all peer-checked:duration-300"
+          className="cursor-pointer px-2 py-1 rounded hover:text-primary hover:font-bold peer-checked:bg-primary peer-checked:text-white peer-checked:font-bold peer-checked:transition-all peer-checked:duration-300"
         >
           سفارش‌ها
         </label>

@@ -1,5 +1,3 @@
-import React from "react";
-
 function BookDescription({ book }) {
   return (
     <section className="container mx-auto px-12 py-8">

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { SearchIcon } from "@heroicons/react/solid";
 import { useSelector, useDispatch } from "react-redux";
 import { setSearchedWord } from "../../src/redux/slices/searchSlice";
@@ -12,6 +12,10 @@ function SearchBarLg() {
   const dispatch = useDispatch();
   const router = useRouter();
   const minimumCharacters = 3;
+
+  useEffect(() => {
+    if (router.pathname !== "/search-results") dispatch(setSearchedWord(""));
+  }, []);
 
   useEffect(() => {
     if (searchedWord.length === minimumCharacters) {

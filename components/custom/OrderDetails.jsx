@@ -1,14 +1,12 @@
 import { useRouter } from "next/router";
-import React from "react";
 import DiscountCodeInput from "./DiscountCodeInput";
 
 function OrderDetails({ cart }) {
-
-  const router = useRouter()
+  const router = useRouter();
 
   const goToFinalizeOrderPage = () => {
-    router.push("/finalize-order")
-  }
+    router.push("/finalize-order");
+  };
 
   return (
     <div className="w-full md:w-2/5 md:mr-5 mb-4 p-4 bg-white rounded-lg shadow-md">
@@ -30,7 +28,10 @@ function OrderDetails({ cart }) {
         <span>مبلغ کل با تخفیف</span>
         <span>{cart.total.toLocaleString("fa-IR")} تومان</span>
       </div>
-      <button className="bg-[#28C5CC] font-bold text-white rounded p-2 cursor-pointer hover:shadow mt-5 w-full" onClick={goToFinalizeOrderPage}>
+      <button
+        className="bg-primary font-bold text-white rounded p-2 cursor-pointer hover:shadow mt-5 w-full"
+        onClick={goToFinalizeOrderPage}
+      >
         نهایی کردن سبد خرید
       </button>
     </div>

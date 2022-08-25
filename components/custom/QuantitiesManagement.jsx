@@ -1,5 +1,3 @@
-import React from "react";
-
 function QuantitiesManagement({ booksSummary }) {
   return (
     <div className="container mx-auto px-12 py-4">
@@ -11,8 +9,10 @@ function QuantitiesManagement({ booksSummary }) {
       {booksSummary.map((book) => (
         <div className="flex pb-2 border-b-2" key={book.id}>
           <span className="w-3/5">{book.title}</span>
-          <span className="w-1/5">{book.price} تومان</span>
-          <span className="w-1/5">{book.quantity}</span>
+          <span className="w-1/5">
+            {book.price.toLocaleString("fa-IR")} تومان
+          </span>
+          <span className="w-1/5">{book.quantity.toLocaleString("fa-IR")}</span>
         </div>
       ))}
     </div>

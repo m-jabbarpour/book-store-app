@@ -1,11 +1,11 @@
 import Head from "next/head";
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import CartTableMd from "../components/custom/CartTableMd";
 import CartTableSm from "../components/custom/CartTableSm";
 import OrderDetails from "../components/custom/OrderDetails";
 import Title from "../components/custom/Title";
-import Wrapper from "../components/custom/Wrapper";
+
 import CommonLayout from "../Layouts/CommonLayout";
 
 function Cart() {

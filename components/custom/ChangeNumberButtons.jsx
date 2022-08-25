@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { PlusIcon, MinusIcon } from "@heroicons/react/solid";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import {
   decrementBook,
   incrementBook,
@@ -25,13 +25,13 @@ function ChangeNumberButtons({ currentBook }) {
   return (
     <div>
       <div className="w-fit mx-auto flex items-center overflow-hidden rounded shadow">
-        <div className="p-2 cursor-pointer bg-[#28C5CC]" onClick={handlePlus}>
+        <div className="p-2 cursor-pointer bg-primary" onClick={handlePlus}>
           <PlusIcon className="w-4 text-white " />
         </div>
         <div className="w-[32px] text-center text-xs bg-white p-2">
           <span>{number}</span>
         </div>
-        <div className="p-2 cursor-pointer bg-[#28C5CC]" onClick={handleMinus}>
+        <div className="p-2 cursor-pointer bg-primary" onClick={handleMinus}>
           <MinusIcon className="w-4 text-white" />
         </div>
       </div>

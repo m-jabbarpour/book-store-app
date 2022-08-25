@@ -1,14 +1,13 @@
-import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { ViewListIcon } from "@heroicons/react/outline";
-import {setSortation} from "../../src/redux/slices/sortationSlice"
+import { setSortation } from "../../src/redux/slices/sortationSlice";
 
 function Sort() {
   const sortation = useSelector((store) => store.sortation.value);
   const dispatch = useDispatch();
   const onOptionChange = (e) => {
-     dispatch(setSortation(e.target.value));
-   };
+    dispatch(setSortation(e.target.value));
+  };
   return (
     <div className="flex items-center gap-2 bg-white rounded-lg mt-4 md:mt-8 p-3">
       <ViewListIcon className="w-6" />

@@ -1,6 +1,6 @@
-import Link from "next/link";
-import React, { useMemo, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+
+import { useMemo, useState } from "react";
+import { useSelector } from "react-redux";
 
 import BookCard from "../../components/custom/BookCard";
 import Pagination from "./Pagination";

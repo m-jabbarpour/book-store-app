@@ -1,5 +1,3 @@
-import React from "react";
-
 function Navigation({ book }) {
   return (
     <div className="w-full bg-neutral-200 text-xs">

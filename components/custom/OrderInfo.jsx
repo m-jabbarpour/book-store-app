@@ -1,4 +1,3 @@
-import React from "react";
 import Title from "./Title";
 import { Formik } from "formik";
 import * as yup from "yup";
@@ -20,11 +19,7 @@ function OrderInfo() {
   });
 
   const handleOrderInfo = (values) => {
-    console.log(values);
-  };
-
-  const goToPaymentResult = () => {
-    router.push("/payment-result");
+    router.push("/payment");
   };
 
   return (
@@ -118,8 +113,7 @@ function OrderInfo() {
             </div>
             <button
               type="submit"
-              className="w-full text-center text-white font-bold bg-[#28C5CC] rounded-lg py-2 cursor-pointer hover:shadow col-span-2 sm:max-w-[320px] mx-auto"
-              onClick={goToPaymentResult}
+              className="w-full text-center text-white font-bold bg-primary rounded-lg py-2 cursor-pointer hover:shadow col-span-2 sm:max-w-[320px] mx-auto"
             >
               پرداخت
             </button>

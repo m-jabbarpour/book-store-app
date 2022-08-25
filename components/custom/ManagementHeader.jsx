@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React, { useEffect } from "react";
 import ManagementMenu from "./ManagementMenu";
 
 function ManagementHeader() {
@@ -9,7 +8,7 @@ function ManagementHeader() {
         <h1 className="text-lg font-bold">پنل مدیریت فروشگاه کتاب</h1>
         <ManagementMenu />
         <Link href="/">
-          <span className="cursor-pointer hover:text-[#28C5CC] hover:font-bold">
+          <span className="cursor-pointer hover:text-primary hover:font-bold">
             بازگشت به سایت
           </span>
         </Link>

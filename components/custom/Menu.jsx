@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { ViewListIcon } from "@heroicons/react/outline";
 import { setFilteredSubCategory } from "../../src/redux/slices/filteredSubCategory";
@@ -11,7 +10,6 @@ function Menu() {
 
   const onOptionChange = (e) => {
     dispatch(setFilteredSubCategory(e.target.value));
-
   };
 
   const categories = [
@@ -48,7 +46,7 @@ function Menu() {
                 />
                 <label
                   htmlFor={`option-${i}-${j}`}
-                  className="cursor-pointer peer-checked:font-bold peer-checked:text-[#28C5CC]"
+                  className="cursor-pointer peer-checked:font-bold peer-checked:text-primary"
                 >
                   {subCategory}
                 </label>

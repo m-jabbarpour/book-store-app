@@ -1,4 +1,3 @@
-import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { showOrderDetailsModal } from "../../src/redux/slices/orderDetailsModalSlice";
 
@@ -38,7 +37,7 @@ function OrderDetailsModal() {
             </div>
           ))}
           <button
-            className="bg-[#28C5CC] font-bold text-white rounded p-2 cursor-pointer hover:shadow mx-auto mt-4 text-center"
+            className="bg-primary font-bold text-white rounded p-2 cursor-pointer hover:shadow mx-auto mt-4 text-center"
             onClick={closeModal}
           >
             تحویل شد

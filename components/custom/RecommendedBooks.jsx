@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import BookSwiper from "./BookSwiper";
 import { fetchBooks } from "../../src/redux/slices/booksSlice";
