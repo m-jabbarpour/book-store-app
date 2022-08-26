@@ -3,7 +3,6 @@ import BooksManagement from "../../components/custom/BooksManagement";
 import ManagementHeader from "../../components/custom/ManagementHeader";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchBooksSummary } from "../../src/redux/slices/booksSummarySlice";
-import QuantitiesManagement from "../../components/custom/QuantitiesManagement";
 import OrdersManagement from "../../components/custom/OrdersManagement";
 
 function Management() {
@@ -20,8 +19,6 @@ function Management() {
       <ManagementHeader />
       {managementMenu.option === "books" ? (
         <BooksManagement booksSummary={booksSummary} />
-      ) : managementMenu.option === "quantities" ? (
-        <QuantitiesManagement booksSummary={booksSummary} />
       ) : (
         <OrdersManagement />
       )}

@@ -5,7 +5,8 @@ function OrderDetails({ cart }) {
   const router = useRouter();
 
   const goToFinalizeOrderPage = () => {
-    router.push("/finalize-order");
+    router.push("/login")
+    // router.push("/finalize-order");
   };
 
   return (

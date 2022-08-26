@@ -28,23 +28,6 @@ function ManagementMenu() {
         <input
           type="radio"
           name="option"
-          id="quantities"
-          value="quantities"
-          className="peer w-0 opacity-0 fixed"
-          checked={managementMenu.option === "quantities"}
-          onChange={(e) => dispatch(setManagementOption(e.target.value))}
-        />
-        <label
-          htmlFor="quantities"
-          className="cursor-pointer px-2 py-1 rounded hover:text-primary hover:font-bold peer-checked:bg-primary peer-checked:text-white peer-checked:font-bold peer-checked:transition-all peer-checked:duration-300"
-        >
-          موجودی و قیمت‌ها
-        </label>
-      </div>
-      <div>
-        <input
-          type="radio"
-          name="option"
           id="orders"
           value="orders"
           className="peer w-0 opacity-0 fixed"

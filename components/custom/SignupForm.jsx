@@ -1,7 +1,11 @@
 import { Formik } from "formik";
+import { useRouter } from "next/router";
+
 import * as yup from "yup";
 
 function SignupForm() {
+  const router = useRouter()
+  
   const signupSchema = yup.object().shape({
     firstName: yup
       .string()
@@ -31,6 +35,8 @@ function SignupForm() {
       email: values.email,
       password: values.password,
     };
+    
+    router.push("/finalize-order");
   };
 
   return (

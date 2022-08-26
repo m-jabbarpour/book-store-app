@@ -17,6 +17,8 @@ import editBookModalSlice from "../slices/editBookModalSlice";
 import orderDetailsModalSlice from "../slices/orderDetailsModalSlice";
 import selectedOrderSlice from "../slices/selectedOrderSlice";
 import bannersSlice from "../slices/bannersSlice";
+import isEditBookActive from "../slices/isEditBookActiveSlice";
+import ordersSlice from "../slices/ordersSlice";
 
 const persistConfig = {
   key: "root",
@@ -35,11 +37,13 @@ const combinedReducers = combineReducers({
   search: searchSlice,
   cart: cartSlice,
   booksSummary: booksSummarySlice,
+  orders: ordersSlice,
   managementMenu: managementMunu,
   selectedBook: selectedBookSlice,
   editBookModal: editBookModalSlice,
   orderDetailsModal: orderDetailsModalSlice,
   selectedOrder: selectedOrderSlice,
+  isEditBookActive: isEditBookActive,
 });
 
 const persistedReducers = persistReducer(persistConfig, combinedReducers);

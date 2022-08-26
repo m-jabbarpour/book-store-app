@@ -31,6 +31,10 @@ body {
   background-color: rgb(245 245 245);
 }
 
+body.active-modal{
+  overflow: hidden;
+}
+
 form::-webkit-scrollbar {
   width: 6px;
 }

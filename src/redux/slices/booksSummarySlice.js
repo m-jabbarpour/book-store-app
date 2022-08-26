@@ -17,12 +17,15 @@ export const booksSummarySlice = createSlice({
     status: "idle",
   },
   reducers: {
+    addBook: (state, action) => {
+      state.value.push(action.payload);
+    },
     deleteBook: (state, action) => {
       state.value = state.value.filter((book) => book.id !== action.payload.id);
     },
     editBook: (state, action) => {
       const editedBook = action.payload;
-      
+
       state.value = state.value.map((book) =>
         book.id === editedBook.id ? editedBook : book
       );
@@ -43,4 +46,4 @@ export const booksSummarySlice = createSlice({
 });
 
 export default booksSummarySlice.reducer;
-export const { deleteBook, editBook } = booksSummarySlice.actions;
+export const { addBook, deleteBook, editBook } = booksSummarySlice.actions;

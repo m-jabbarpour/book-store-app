@@ -1,11 +1,17 @@
-import { useDispatch } from "react-redux";
-import { orders } from "../../src/database/orders";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { showOrderDetailsModal } from "../../src/redux/slices/orderDetailsModalSlice";
+import { fetchOrders } from "../../src/redux/slices/ordersSlice";
 import { setSelectedOrder } from "../../src/redux/slices/selectedOrderSlice";
 import OrderDetailsModal from "./OrderDetailsModal";
 
 function OrdersManagement() {
   const dispatch = useDispatch();
+  const orders = useSelector((store) => store.orders.value);
+
+  useEffect(() => {
+    dispatch(fetchOrders());
+  }, []);
 
   const showOrder = (order) => {
     dispatch(showOrderDetailsModal(true));
