@@ -1,8 +1,8 @@
 import React from "react";
 import PaymentSuccess from "../../components/custom/PaymentSuccess";
 
-function success() {
+function Success() {
   return <PaymentSuccess />;
 }
 
-export default success;
+export default Success;

@@ -3,7 +3,7 @@ import BooksContainer from "../components/custom/BooksContainer";
 import NoBookFound from "../components/custom/NoBookFound";
 import CommonLayout from "../Layouts/CommonLayout";
 
-function searchResults() {
+function SearchResults() {
   const foundBooks = useSelector((store) => store.search.foundBooks);
   return (
     <CommonLayout>
@@ -18,4 +18,4 @@ function searchResults() {
   );
 }
 
-export default searchResults;
+export default SearchResults;

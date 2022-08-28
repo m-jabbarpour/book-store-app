@@ -2,7 +2,7 @@ import React from "react";
 import LoginManagement from "../../components/custom/LoginManagement";
 import AuthLayout from "../../Layouts/AuthLayout";
 
-function login() {
+function Login() {
   return (
     <AuthLayout>
       <LoginManagement />
@@ -10,4 +10,4 @@ function login() {
   );
 }
 
-export default login;
+export default Login;
