@@ -14,7 +14,7 @@ import {
 } from "../../src/redux/slices/displayedBooksSlice";
 import NoBookFound from "../../components/custom/NoBookFound";
 
-function books() {
+function Books() {
   const dispatch = useDispatch();
   const books = useSelector((store) => store.books);
   const filteredAuthors = useSelector((store) => store.filteredAuthors.value);
@@ -75,4 +75,4 @@ function books() {
   );
 }
 
-export default books;
+export default Books;

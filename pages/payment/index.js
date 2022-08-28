@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-function payment() {
+function Payment() {
   const router = useRouter();
   return (
     <div className="h-[100vh] w-100 flex justify-center items-center">
@@ -22,4 +22,4 @@ function payment() {
   );
 }
 
-export default payment;
+export default Payment;

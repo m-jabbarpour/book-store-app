@@ -17,8 +17,11 @@ function Comments({ bookTitle, comments }) {
         <h2 className="text-sm sm:text-xl font-bold mb-4">
           {`نظرات کاربران درباره کتاب ${bookTitle}`}
         </h2>
-        {currentComments.map((comment) => (
-          <div className="py-3 border-b border-neutral-400 border-dotted">
+        {currentComments.map((comment, index) => (
+          <div
+            key={index}
+            className="py-3 border-b border-neutral-400 border-dotted"
+          >
             <h6 className="text-sm">{comment.userName}</h6>
             <span>{"⭐".repeat(comment.rate)}</span>
             <p className="text-xs text-justify text-gray-600 px-10">

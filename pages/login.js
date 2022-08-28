@@ -2,7 +2,7 @@ import Link from "next/link";
 import LoginForm from "../components/custom/LoginForm";
 import AuthLayout from "../Layouts/AuthLayout";
 
-function login() {
+function Login() {
   return (
     <AuthLayout>
       <LoginForm />
@@ -16,4 +16,4 @@ function login() {
   );
 }
 
-export default login;
+export default Login;

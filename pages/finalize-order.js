@@ -1,7 +1,7 @@
 import OrderInfo from "../components/custom/OrderInfo";
 import CommonLayout from "../Layouts/CommonLayout";
 
-function finalizeOrder() {
+function FinalizeOrder() {
   return (
     <CommonLayout>
       <OrderInfo />
@@ -9,4 +9,4 @@ function finalizeOrder() {
   );
 }
 
-export default finalizeOrder;
+export default FinalizeOrder;

@@ -1,10 +1,10 @@
 import React from 'react'
 import PaymentFail from '../../components/custom/PaymentFail'
 
-function fail() {
+function Fail() {
   return (
     <PaymentFail/>
   )
 }
 
-export default fail
+export default Fail

@@ -3,7 +3,7 @@ import Link from "next/link";
 import SignupForm from "../components/custom/signupForm";
 import AuthLayout from "../Layouts/AuthLayout";
 
-function signup() {
+function Signup() {
   return (
     <AuthLayout>
       <SignupForm />
@@ -17,4 +17,4 @@ function signup() {
   );
 }
 
-export default signup;
+export default Signup;
