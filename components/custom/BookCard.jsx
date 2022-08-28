@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function BookCard({ book }) {
   return (
-    <Link href={`http://localhost:3000/books/${book.id}`}>
+    <Link href={`/books/${book.id}`}>
       <div className="group w-[92px] sm:w-[120px] lg:w-[150px] cursor-pointer ">
         <div className="relative w-[92px] h-[138px] sm:w-[120px] sm:h-[180px] lg:w-[150px] lg:h-[225px] mb-2 shadow-lg group-hover:shadow-[0_6px_6px_0px_#00000052] transition-all duration-300 rounded overflow-hidden">
           {" "}
