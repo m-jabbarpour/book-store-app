@@ -19,7 +19,7 @@ function LoginManagement() {
   const handleLogin = async (values) => {
     const user = { email: values.email, password: values.password };
     axios
-      .post("http://localhost:3000/api/local-auth/login", user)
+      .post("/api/local-auth/login", user)
       .then((res) => {
         setCookie("token", res.data.token, { maxAge: 24 * 60 * 60 });
         router.push("/management");
