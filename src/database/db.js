@@ -25,7 +25,7 @@ const booksDataBase = [
     publications: "مهرگان خرد",
     category: "روان‌شناسی و موفقیت",
     subCategory: "توسعه فردی",
-    image: "	https://imgcdn.taaghche.com/frontCover/28190.jpg?w=200",
+    image: "https://imgcdn.taaghche.com/frontCover/28190.jpg?w=200",
     rate: 4.3,
     numberOfComments: 163,
     price: 18000,
