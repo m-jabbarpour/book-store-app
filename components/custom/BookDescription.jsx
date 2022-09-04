@@ -1,6 +1,6 @@
 function BookDescription({ book }) {
   return (
-    <section className="container mx-auto px-12 py-8">
+    <section className="container py-8">
       <div>
         <h2 className="text-sm sm:text-xl font-bold mb-4">
           معرفی کتاب {book.title}

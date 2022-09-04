@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 
 export default function SwiperLg() {
   return (
-    <div className="container mx-auto px-12 mt-8 bg-neutral-100">
+    <div className="container mt-8 bg-neutral-100">
       <Swiper
         centeredSlides={true}
         loop={true}

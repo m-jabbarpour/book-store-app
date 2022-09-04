@@ -37,7 +37,7 @@ function BooksManagement({ booksSummary }) {
 
   return (
     <div>
-      <div className="container flex flex-col mx-auto px-12 py-6 rounded-lg justify-between">
+      <div className="container flex flex-col py-6 rounded-lg justify-between">
         <button className="bg-primary rounded font-bold text-white p-2 mb-6 w-fit flex items-center gap-2"
         onClick={handleAddBook}>
           <span>افزودن کتاب جدید</span>

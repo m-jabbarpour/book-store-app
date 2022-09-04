@@ -13,7 +13,7 @@ function Comments({ bookTitle, comments }) {
 
   return (
     <div className="bg-neutral-50">
-      <div className=" container mx-auto px-12 py-8">
+      <div className=" container py-8">
         <h2 className="text-sm sm:text-xl font-bold mb-4">
           {`نظرات کاربران درباره کتاب ${bookTitle}`}
         </h2>

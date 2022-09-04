@@ -20,7 +20,7 @@ function OrdersManagement() {
 
   return (
     <>
-      <div className="container mx-auto px-12 py-4">
+      <div className="container py-4">
         <div className="flex pb-2 border-b-2 font-bold">
           <span className="w-1/4">نام کاربر</span>
           <span className="w-1/4">مجموع مبلغ</span>

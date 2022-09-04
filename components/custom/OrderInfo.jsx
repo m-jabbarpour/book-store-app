@@ -23,7 +23,7 @@ function OrderInfo() {
   };
 
   return (
-    <div className="container mx-auto px-12 pt-4 pb-6 sm:pt-8 sm:pb-12">
+    <div className="container pt-4 pb-6 sm:pt-8 sm:pb-12">
       <Title title="نهایی کردن سبد خرید" />
       <Formik
         initialValues={{
