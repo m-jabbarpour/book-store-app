@@ -6,13 +6,14 @@ import { MenuIcon } from "@heroicons/react/solid";
 import SearchBarSm from "./SearchBarSm";
 import Link from "next/link";
 import CartIcon from "../custom/CartIcon";
+import MobileDrawer from "../custom/MobileDrawer";
 
 function HeaderSm() {
   return (
     <header className="md:hidden h-[5rem] shadow-lg">
       <div className="container mx-auto px-5 py-4 rounded-lg flex justify-between">
         <div className="flex gap-x-4 items-center">
-          <MenuIcon className="w-6" />
+          <MobileDrawer/>
           <SearchBarSm />
         </div>
         <Link href="/">

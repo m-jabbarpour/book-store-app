@@ -1,4 +1,3 @@
-
 import { useMemo, useState } from "react";
 import { useSelector } from "react-redux";
 
@@ -18,7 +17,7 @@ function BooksContainer({ books }) {
   }, [currentPage, sortation, books]);
 
   return (
-    <main className="flex flex-col justify-between pt-4 pb-6 sm:pt-8 sm:pb-12 pr-8">
+    <main className="flex flex-col justify-between pt-4 pb-6 sm:pt-8 sm:pb-12 mx-auto">
       <div className="flex flex-wrap gap-12">
         {currentBooks.map((book) => (
           <div className="flex justify-center}" key={book.id}>
