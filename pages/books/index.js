@@ -59,7 +59,7 @@ function Books() {
         <title>طاقچه | کتاب‌ها</title>
       </Head>
       <CommonLayout>
-        <div className="container mx-auto px-12 flex flex-col md:flex-row">
+        <div className="container flex flex-col md:flex-row">
           <SideBar />
           <div className="grow">
             <Sort />
