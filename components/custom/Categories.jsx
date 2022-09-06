@@ -29,7 +29,7 @@ function Categories() {
     <div className="flex flex-col gap-2">
       {categories.map((item, i) => (
         <div key={i} className="flex flex-col gap-1">
-          <h3 className="font-bold text-lg">{item.category}</h3>
+          <h3 className="font-bold text-lg md:text-base">{item.category}</h3>
           {item.subCategories.map((subCategory, j) => (
             <h4
               key={j}
