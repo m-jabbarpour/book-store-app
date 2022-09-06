@@ -1,6 +1,6 @@
 function QuantitiesManagement({ booksSummary }) {
   return (
-    <div className="container mx-auto px-12 py-4">
+    <div className="container py-4">
       <div className="flex font-bold pb-2 border-b-2">
         <span className="w-3/5">عنوان کتاب</span>
         <span className="w-1/5">قیمت</span>

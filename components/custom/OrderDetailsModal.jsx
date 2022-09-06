@@ -14,7 +14,7 @@ function OrderDetailsModal() {
 
   if (orderDetailsModal)
     return (
-      <div className="w-full h-full absolute right-0 top-0 flex items-center bg-[#00000077]">
+      <div className="w-full h-full absolute right-0 top-0 flex items-center bg-modal">
         <div className="w-1/3 flex flex-col mx-auto rounded-lg p-5 overflow-hidden bg-neutral-100">
           <h1 className="font-bold mb-4">نمایش سفارش</h1>
           <h5 className="mb-2">

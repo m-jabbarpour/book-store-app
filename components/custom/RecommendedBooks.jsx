@@ -37,7 +37,7 @@ function RecommendedBooks({ currentBook, property }) {
   if (otherBooksOfProperty.length === 0) return;
 
   return (
-    <div className="container mx-auto px-12 pt-4 pb-6 sm:pt-8 sm:pb-12 bg-neutral-100">
+    <div className="container pt-4 pb-6 sm:pt-8 sm:pb-12 bg-neutral-100">
       <div className="flex justify-between mb-6">
         <h2 className="text-sm sm:text-lg font-bold">{`سایر کتاب‌های ${currentBook[property]}`}</h2>
       </div>

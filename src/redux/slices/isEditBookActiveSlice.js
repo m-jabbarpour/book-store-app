@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const idEditBookActiveSlice = createSlice({
+const isEditBookActiveSlice = createSlice({
   name: "isEditBookActive",
   initialState: { value: false },
   reducers: {
@@ -10,5 +10,5 @@ const idEditBookActiveSlice = createSlice({
   },
 });
 
-export default idEditBookActiveSlice.reducer;
-export const { changeIsEditBookActive } = idEditBookActiveSlice.actions;
+export default isEditBookActiveSlice.reducer;
+export const { changeIsEditBookActive } = isEditBookActiveSlice.actions;

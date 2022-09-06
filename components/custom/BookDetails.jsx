@@ -4,7 +4,7 @@ import AddToCartButton from "./AddToCartButton";
 
 function BookDetails({ book }) {
   return (
-    <div className="my-8 container mx-auto px-12">
+    <div className="container my-8">
       <div className="flex flex-col sm:flex-row">
         <div className="flex pb-4">
           <div className="relative w-[120px] h-[177.6px] sm:w-[150px] sm:h-[222px] lg:w-[180px] lg:h-[270px] xl:w-[200px] xl:h-[296px] rounded sm:rounded-lg overflow-hidden shadow-lg">

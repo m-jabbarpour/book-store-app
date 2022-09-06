@@ -5,11 +5,12 @@ import SearchBarLg from "./SearchBarLg";
 import { UserCircleIcon } from "@heroicons/react/solid";
 import Link from "next/link";
 import CartIcon from "../custom/CartIcon";
+import DropDownMenu from "../custom/DropDownMenu";
 
 function HeaderMd() {
   return (
     <header className="hidden md:block shadow-lg">
-      <div className="container mx-auto px-12 py-4 rounded-lg flex justify-between">
+      <div className="container py-4 rounded-lg flex justify-between">
         <div className="flex gap-x-4 items-center">
           <Link href="/">
             <Image
@@ -20,7 +21,7 @@ function HeaderMd() {
               className=" cursor-pointer"
             />
           </Link>
-          <span className=" cursor-pointer">دسته‌بندی</span>
+          <DropDownMenu />
           <SearchBarLg />
         </div>
         <div className="flex gap-x-4 items-center">

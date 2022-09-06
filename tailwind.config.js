@@ -8,6 +8,17 @@ module.exports = {
     extend: {
       colors: {
         primary: "#28C5CC",
+        modal: "#00000077",
+      },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "1rem",
+          sm: "2rem",
+          lg: "4rem",
+          xl: "5rem",
+          "2xl": "6rem",
+        },
       },
     },
   },

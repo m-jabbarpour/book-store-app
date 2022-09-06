@@ -10,8 +10,8 @@ function Sort() {
   };
   return (
     <div className="flex items-center gap-2 bg-white rounded-lg mt-4 md:mt-8 p-3">
-      <ViewListIcon className="w-6" />
-      <span>مرتب‌سازی بر اساس:</span>
+      <ViewListIcon className="w-6 hidden sm:block" />
+      <span className="hidden sm:block">مرتب‌سازی بر اساس:</span>
       <form className="flex justify-around grow">
         <div>
           <input

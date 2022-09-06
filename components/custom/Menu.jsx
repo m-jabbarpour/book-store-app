@@ -32,7 +32,7 @@ function Menu() {
       <form className="flex flex-col gap-2 pr-1 overflow-y-auto text-xs">
         {categories.map((item, i) => (
           <div key={i}>
-            <h6 className=" mb-2">{item.category}</h6>
+            <h6 className="mb-2">{item.category}</h6>
             {item.subCategories.map((subCategory, j) => (
               <div key={j} className="pr-3 mb-2">
                 <input

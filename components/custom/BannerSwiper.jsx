@@ -16,7 +16,7 @@ export default function BannerSwiper({ category, banners }) {
   }, [banners]);
 
   return (
-    <section className="container mx-auto px-12 pt-4 pb-6 sm:pt-8 sm:pb-12 bg-neutral-100">
+    <section className="container pt-4 pb-6 sm:pt-8 sm:pb-12 bg-neutral-100">
       <Swiper
         slidesPerView={"auto"}
         spaceBetween={30}

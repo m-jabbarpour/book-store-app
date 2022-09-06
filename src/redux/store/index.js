@@ -19,6 +19,7 @@ import selectedOrderSlice from "../slices/selectedOrderSlice";
 import bannersSlice from "../slices/bannersSlice";
 import isEditBookActive from "../slices/isEditBookActiveSlice";
 import ordersSlice from "../slices/ordersSlice";
+import isDrawerActive from "../slices/isDrawerActive";
 
 const persistConfig = {
   key: "root",
@@ -44,6 +45,7 @@ const combinedReducers = combineReducers({
   orderDetailsModal: orderDetailsModalSlice,
   selectedOrder: selectedOrderSlice,
   isEditBookActive: isEditBookActive,
+  isDrawerActive: isDrawerActive,
 });
 
 const persistedReducers = persistReducer(persistConfig, combinedReducers);
